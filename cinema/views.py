@@ -21,7 +21,6 @@ from cinema.serializers import (
     OrderListSerializer,
 )
 
-from rest_framework.authentication import TokenAuthentication
 from cinema.permissions import IsAdminOrIfAuthenticatedReadOnly
 
 
@@ -32,7 +31,6 @@ class GenreViewSet(
 ):
     queryset = Genre.objects.all()
     serializer_class = GenreSerializer
-    # authentication_classes = (TokenAuthentication,)
     permission_classes = (IsAdminOrIfAuthenticatedReadOnly,)
 
 

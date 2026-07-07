@@ -1,4 +1,3 @@
-# write your code here
 from rest_framework import generics
 from user.serializers import UserSerializer
 from rest_framework.authtoken.views import ObtainAuthToken
